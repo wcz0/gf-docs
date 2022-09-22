@@ -6,6 +6,12 @@ GF 文档, 非官方项目
 
 发动社区力量, 欢迎PR
 
+`clone 后执行 pnpm i`
+
+`pnpm docs:dev`
+
+在线地址 [https://gf-docs.wcz.one](https://gf-docs.wcz.one)
+
 官方地址 [https://goframe.org/display/gf](https://goframe.org/display/gf)
 
 使用[Vitepress](https://vitepress.vuejs.org/ "Viteoress")构建
