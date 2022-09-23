@@ -1,1 +1,0 @@
-import{_ as e,c as t,o as r}from"./app.7f645a49.js";const h=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"other/share.md"}'),a={name:"other/share.md"};function o(s,c,n,p,_,d){return r(),t("div")}const m=e(a,[["render",o]]);export{h as __pageData,m as default};
