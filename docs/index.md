@@ -11,7 +11,7 @@ hero:
   actions:
     - theme: brand
       text: 快速开始
-      link: /guide/getting-started
+      link: /guide/getting-start/install
     - theme: alt
       text: 在GitHub上查看
       link: https://github.com/gogf/gf

@@ -3,6 +3,9 @@ export default {
   title: "GoFrame",
   description: "Documentation of GoFrame Framework",
   base: "/gf-docs/",
+  head: [
+    ['link', { rel: 'icon', href: '/images/logo.png'}]
+  ],
   themeConfig: {
     editLink: {
       pattern: "https://github.com/wcz0/gf-docs/edit/main/docs/:path",
@@ -24,7 +27,11 @@ export default {
 
 function nav() {
   return [
-    { text: "指南(wip)", link: "/guide/index", activeMatch: "/guide/" },
+    { 
+      text: "指南(wip)", 
+      link: "/guide/introduction/introduce", 
+      activeMatch: "/guide/"
+    },
     {
       text: "关于(wip)",
       items: [
@@ -51,7 +58,7 @@ function sidebarGuide() {
       items: [
         { text: "项目介绍", link: "/guide/introduction/introduce" },
         { text: "版本计划", link: "/guide/introduction/project" },
-        { text: "如果从v1升级到v2", link: "/guide/introduction/upgrade" },
+        { text: "如何从v1升级到v2", link: "/guide/introduction/upgrade" },
         { text: "版本更新记录", link: "/guide/introduction//record" },
       ],
     },
