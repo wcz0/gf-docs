@@ -6,9 +6,6 @@ GF 文档, 非官方项目
 
 个人能量有限, 欢迎PR
 
-本地预览  `clone 后执行 pnpm i`
-
-`pnpm docs:dev`
 
 在线地址 [https://gf-docs.wcz.one](https://gf-docs.wcz.one)
 
