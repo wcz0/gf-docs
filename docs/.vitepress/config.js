@@ -18,8 +18,10 @@ export default {
     nav: nav(),
     sidebar: {
       "/guide/": sidebarGuide(),
-      "/about/": sidebarAbout(),
-      "/other/": sidebarElse(),
+      "/about/join": sidebarAboutJoin(),
+      "/about/support": sidebarAboutSupport(),
+      "/other/design": sidebarOtherDesign(),
+      "/other/learning": sidebarOtherLearning(),
     },
     socialLinks: [{ icon: "github", link: "https://github.com/gogf/gf" }],
   },
@@ -45,6 +47,7 @@ function nav() {
       items: [
         { text: "框架学习资料", link: "/other/learning" },
         { text: "技术分享交流", link: "/other/share" },
+        { text: "框架设计", link: "/other/design" },
       ],
       activeMatch: "/other/",
     },
@@ -66,7 +69,7 @@ function sidebarGuide() {
       text: "快速开始",
       items: [
         { text: "安装", link: "/guide/getting-start/install" },
-        { text: "开发工具 gf", link: "/guide/getting-start/gf-tool" },
+        { text: "开发工具", link: "/guide/getting-start/gf-tool" },
         { text: "目录结构", link: "/guide/getting-start/structure" },
         { text: "配置", link: "/guide/getting-start/configure" },
         { text: "部署", link: "/guide/getting-start/deploy" },
@@ -144,7 +147,7 @@ function sidebarGuide() {
   ];
 }
 
-function sidebarAbout() {
+function sidebarAboutJoin() {
   return [
     {
       text: "加入我们",
@@ -154,14 +157,21 @@ function sidebarAbout() {
         { text: "社区招募", link: "/about/recruitment" },
       ],
     },
+    
+  ];
+}
+
+function sidebarAboutSupport(){
+  return [
     {
       text: "支持我们",
       items: [{ text: "来杯咖啡", link: "/about/support" }],
     },
-  ];
+  ]
 }
 
-function sidebarElse() {
+
+function sidebarOtherLearning() {
   return [
     {
       text: "框架学习资料",
@@ -172,6 +182,23 @@ function sidebarElse() {
         { text: "格式化打印占位符", link: "/other/fmt" },
       ],
     },
+    
+  ];
+}
+
+function sidebarOtherShare(){
+  return [
+    {
+      text: "技术分享交流",
+      items: [
+        { text: "Q群", link: "/other/" },
+      ],
+    },
+  ]
+}
+
+function sidebarOtherDesign(){
+  return [
     {
       text: "框架设计",
       items: [
@@ -186,5 +213,5 @@ function sidebarElse() {
         { text: "Context相关设计", link: "/other/design/" },
       ],
     },
-  ];
+  ]
 }
