@@ -16,7 +16,7 @@ export default {
     sidebar: {
       "/guide/": sidebarGuide(),
       "/about/": sidebarAbout(),
-      "/else/": sidebarElse(),
+      "/other/": sidebarElse(),
     },
     socialLinks: [{ icon: "github", link: "https://github.com/gogf/gf" }],
   },
@@ -24,17 +24,17 @@ export default {
 
 function nav() {
   return [
-    { text: "指南", link: "/guide/index", activeMatch: "/guide/" },
+    { text: "指南(wip)", link: "/guide/index", activeMatch: "/guide/" },
     {
-      text: "关于",
+      text: "关于(wip)",
       items: [
-        { text: "加入我们", link: "/about/install" },
-        { text: "支持我们", link: "/about/index" },
+        { text: "加入我们", link: "/about/join" },
+        { text: "支持我们", link: "/about/support" },
       ],
       activeMatch: "/about/",
     },
     {
-      text: "其他",
+      text: "其他(wip)",
       items: [
         { text: "框架学习资料", link: "/other/learning" },
         { text: "技术分享交流", link: "/other/share" },
@@ -50,7 +50,8 @@ function sidebarGuide() {
       text: "前言",
       items: [
         { text: "项目介绍", link: "/guide/introduction/introduce" },
-        { text: "版本计划", link: "/guide/introduction/record" },
+        { text: "版本计划", link: "/guide/introduction/project" },
+        { text: "如果从v1升级到v2", link: "/guide/introduction/upgrade" },
         { text: "版本更新记录", link: "/guide/introduction//record" },
       ],
     },
@@ -58,7 +59,7 @@ function sidebarGuide() {
       text: "快速开始",
       items: [
         { text: "安装", link: "/guide/getting-start/install" },
-        { text: "开发工具 gf", link: "/guide/getting-start/gf-tools" },
+        { text: "开发工具 gf", link: "/guide/getting-start/gf-tool" },
         { text: "目录结构", link: "/guide/getting-start/structure" },
         { text: "配置", link: "/guide/getting-start/configure" },
         { text: "部署", link: "/guide/getting-start/deploy" },
@@ -78,18 +79,19 @@ function sidebarGuide() {
       items: [
         { text: "路由", link: "/guide/basics/route" },
         { text: "API文档", link: "/guide/basics/api-docs" },
+        { text: "中间件", link: "/guide/basics/middleware" },
         { text: "请求", link: "/guide/basics/request" },
+        { text: "表单验证", link: "/guide/basics/validation" },
         { text: "响应", link: "/guide/basics/response" },
         { text: "Cookie", link: "/guide/basics/cookie" },
         { text: "Session", link: "/guide/basics/session" },
         { text: "异常处理", link: "/guide/basics/exception" },
         { text: "错误处理", link: "/guide/basics/error" },
+        { text: "数据库ORM", link: "/guide/basics/orm" },
         { text: "分页管理", link: "/guide/basics/pagination" },
-        { text: "数据校验", link: "/guide/basics/validation" },
-        { text: "数据库ORM", link: "/guide/basics/cache" },
-        { text: "缓存", link: "/guide/basics/route" },
-        { text: "Redis", link: "/guide/basics/route" },
         { text: "模板引擎", link: "/guide/basics/template" },
+        { text: "缓存", link: "/guide/basics/cache" },
+        { text: "Redis", link: "/guide/basics/redis" },
         { text: "I18N", link: "/guide/basics/i18n" },
         { text: "资源管理", link: "/guide/basics/resource" },
         { text: "日志", link: "/guide/basics/log" },
@@ -100,8 +102,8 @@ function sidebarGuide() {
       items: [
         { text: "HTTP 客户端", link: "/guide/deep/http-client" },
         { text: "任务定时器", link: "/guide/deep/cron" },
-        { text: "命令行", link: "/guide/deep/command-line" },
-        { text: "链路跟踪", link: "/guide/deep/route" },
+        { text: "命令行", link: "/guide/deep/command" },
+        { text: "链路跟踪", link: "/guide/deep/periodic" },
       ],
     },
     {
@@ -162,7 +164,6 @@ function sidebarElse() {
         { text: "官方教程", link: "/other/" },
         { text: "社区教程", link: "/other/" },
         { text: "Golang资源", link: "/other/go-resource" },
-        { text: "如果从v1升级到v2", link: "/other/upgrade" },
         { text: "格式化打印占位符", link: "/other/fmt" },
       ],
     },
