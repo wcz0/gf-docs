@@ -1,0 +1,1 @@
+import{_ as t,c as e,o as r}from"./app.ee3eedaa.js";const _=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"guide/getting-start/structure.md"}'),a={name:"guide/getting-start/structure.md"};function s(c,n,o,i,u,d){return r(),e("div")}const m=t(a,[["render",s]]);export{_ as __pageData,m as default};

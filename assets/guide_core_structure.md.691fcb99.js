@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as r}from"./app.ee3eedaa.js";const _=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"guide/core/structure.md"}'),c={name:"guide/core/structure.md"};function a(o,s,n,u,d,i){return r(),t("div")}const m=e(c,[["render",a]]);export{_ as __pageData,m as default};
