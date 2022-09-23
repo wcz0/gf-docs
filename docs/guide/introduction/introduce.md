@@ -22,7 +22,7 @@
 
 # 架构
 
-![img](/images/arch.png)
+![img](arch.png)
 
 # 地址
 
