@@ -1,1 +1,0 @@
-import{_ as e,c as t,o as r}from"./app.ee3eedaa.js";const u=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"guide/web-service/udp.md"}'),a={name:"guide/web-service/udp.md"};function s(c,o,n,d,p,i){return r(),t("div")}const m=e(a,[["render",s]]);export{u as __pageData,m as default};
