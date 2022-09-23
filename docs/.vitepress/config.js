@@ -4,7 +4,7 @@ export default {
   description: "Documentation of GoFrame Framework",
   base: "/gf-docs/",
   head: [
-    ['link', { rel: 'icon', href: '/images/logo.png'}]
+    ['link', { rel: 'icon', href: '/favicon.ico'}]
   ],
   themeConfig: {
     editLink: {
