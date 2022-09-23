@@ -2,7 +2,7 @@ export default {
   lang: "zh-CN",
   title: "GoFrame",
   description: "Documentation of GoFrame Framework",
-
+  base: "/gf-docs/",
   themeConfig: {
     editLink: {
       pattern: "https://github.com/wcz0/gf-docs/edit/main/docs/:path",
@@ -128,15 +128,13 @@ function sidebarGuide() {
         { text: "TCP组件", link: "/guide/web-service/tcp" },
         { text: "UDP组件", link: "/guide/web-service/udp" },
         { text: "WebSocket", link: "/guide/web-service/websocket" },
-      ]
+      ],
     },
     {
       text: "相关拓展包",
-      items: [
-        { text: "gtoken", link: "/guide/packages/gtoken" },
-      ]
-    }
-  ]
+      items: [{ text: "gtoken", link: "/guide/packages/gtoken" }],
+    },
+  ];
 }
 
 function sidebarAbout() {
@@ -179,7 +177,7 @@ function sidebarElse() {
         { text: "接口化与泛型设计", link: "/other/design/" },
         { text: "隐式与显式设计", link: "/other/design/" },
         { text: "Context相关设计", link: "/other/design/" },
-      ]
+      ],
     },
   ];
 }
