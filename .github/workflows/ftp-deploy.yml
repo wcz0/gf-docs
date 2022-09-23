@@ -26,4 +26,3 @@ jobs:
           username: ${{ secrets.ftp_user }}
           password: ${{ secrets.ftp_pwd }}
           local-dir: docs/.vitepress/dist
-          server-dir: /
