@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as a}from"./app.29c6ab58.js";const g=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"guide/packages/gtoken.md"}'),o={name:"guide/packages/gtoken.md"};function n(r,s,c,p,d,i){return a(),t("div")}const m=e(o,[["render",n]]);export{g as __pageData,m as default};
