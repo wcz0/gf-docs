@@ -3,13 +3,24 @@ export default {
   title: "GoFrame",
   description: "Documentation of GoFrame Framework",
   base: "/gf-docs/",
+  lastUpdated: true,
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico'}]
   ],
   themeConfig: {
+    nextPageText: '下一页',
+    lastUpdatedText: '上次更新',
+    outlineTitle: '本页目录',
+    // logo: '/logo.png',
+    // outline: 2,
     editLink: {
       pattern: "https://github.com/wcz0/gf-docs/edit/main/docs/:path",
       text: "在GitHub上编辑这个页面",
+    },
+    algolia: {
+      appId: '',
+      apiKey: '',
+      indexName: 'gf-docs',
     },
     footer: {
       message: "Released under the MIT License.",
@@ -24,6 +35,10 @@ export default {
       "/other/learning": sidebarOtherLearning(),
     },
     socialLinks: [{ icon: "github", link: "https://github.com/gogf/gf" }],
+    docFooter: {
+      prev: '上一页',
+      next: '下一页'
+    }
   },
 };
 
