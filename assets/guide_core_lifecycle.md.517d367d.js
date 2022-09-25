@@ -1,1 +1,0 @@
-import{_ as e,c as t,o as c}from"./app.c9df3a94.js";const _=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"guide/core/lifecycle.md"}'),r={name:"guide/core/lifecycle.md"};function a(o,s,n,i,l,d){return c(),t("div")}const f=e(r,[["render",a]]);export{_ as __pageData,f as default};

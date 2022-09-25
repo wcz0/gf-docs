@@ -1,0 +1,1 @@
+import{_ as t,c as e,o as a}from"./app.27094a42.js";const f=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"guide/getting-start/gf-tool.md","lastUpdated":1664089810000}'),o={name:"guide/getting-start/gf-tool.md"};function r(s,n,c,d,i,p){return a(),e("div")}const g=t(o,[["render",r]]);export{f as __pageData,g as default};
