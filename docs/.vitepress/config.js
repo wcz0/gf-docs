@@ -17,11 +17,11 @@ export default {
       pattern: "https://github.com/wcz0/gf-docs/edit/main/docs/:path",
       text: "在GitHub上编辑这个页面",
     },
-    algolia: {
-      appId: '',
-      apiKey: '',
-      indexName: 'gf-docs',
-    },
+    // algolia: {
+    //   appId: '',
+    //   apiKey: '',
+    //   indexName: 'gf-docs',
+    // },
     footer: {
       message: "Released under the MIT License.",
       copyright: "Copyright © 2022-present wcz0",
