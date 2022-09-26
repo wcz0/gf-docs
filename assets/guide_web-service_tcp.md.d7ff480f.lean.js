@@ -1,1 +1,0 @@
-import{_ as e,c as t,o as a}from"./app.c7a9f707.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"guide/web-service/tcp.md","lastUpdated":1664177186000}'),c={name:"guide/web-service/tcp.md"};function r(s,o,n,p,d,i){return a(),t("div")}const f=e(c,[["render",r]]);export{m as __pageData,f as default};
