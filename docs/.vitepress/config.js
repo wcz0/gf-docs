@@ -1,8 +1,10 @@
+let HOST = process.argv.splice(2)[0] || 'ftp';
+
 export default {
   lang: "zh-CN",
   title: "GoFrame",
   description: "Documentation of GoFrame Framework",
-  base: "/gf-docs/",
+  base: HOST ? "" : "/gf-docs/",
   lastUpdated: true,
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico'}]
