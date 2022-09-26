@@ -6,7 +6,7 @@
   "scripts": {
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:build-ftp": "vitepress build --base=/ docs",
+    "docs:build-github": "vitepress build --base=/gf-docs/ docs",
     "docs:serve": "vitepress serve docs"
   },
   "keywords": [],

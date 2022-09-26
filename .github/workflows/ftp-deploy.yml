@@ -17,7 +17,7 @@ jobs:
       - run: yarn install --frozen-lockfile
 
       - name: Build
-        run: yarn docs:build-ftp
+        run: yarn docs:build
 
       - name: FTP Deploy
         uses: SamKirkland/FTP-Deploy-Action@4.0.0

@@ -2,7 +2,7 @@ export default {
   lang: "zh-CN",
   title: "GoFrame",
   description: "Documentation of GoFrame Framework",
-  base: '/gf-docs/',
+  // base: '/gf-docs/',
   lastUpdated: true,
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico'}]
