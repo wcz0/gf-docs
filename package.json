@@ -6,13 +6,15 @@
   "scripts": {
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:build-ftp": "vitepress build docs --ftp",
+    "docs:build-ftp": "cross-env BASE=/ vitepress build docs",
     "docs:serve": "vitepress serve docs"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.2",
     "vitepress": "1.0.0-alpha.15",
     "vue": "^3.2.39"
   },

@@ -1,10 +1,11 @@
-let HOST = process.argv.splice(2)[0];
+import * as dotenv from 'dotenv'
+dotenv.config()
 
 export default {
   lang: "zh-CN",
   title: "GoFrame",
   description: "Documentation of GoFrame Framework",
-  base: HOST ? "" : "/gf-docs/",
+  base: process.env.BASE ?? '/gf-docs/',
   lastUpdated: true,
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico'}]
