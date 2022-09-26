@@ -32,6 +32,7 @@ export default {
       "/about/support": sidebarAboutSupport(),
       "/other/design": sidebarOtherDesign(),
       "/other/learning": sidebarOtherLearning(),
+      "/other/question": sidebarOtherQuestion(),
     },
     socialLinks: [{ icon: "github", link: "https://github.com/gogf/gf" }],
     docFooter: {
@@ -62,6 +63,7 @@ function nav() {
         { text: "框架学习资料", link: "/other/learning" },
         { text: "技术分享交流", link: "/other/share" },
         { text: "框架设计", link: "/other/design" },
+        { text: "常见问题", link: "/other/question" },
       ],
       activeMatch: "/other/",
     },
@@ -92,10 +94,10 @@ function sidebarGuide() {
     {
       text: "核心概念",
       items: [
+        { text: "生命周期", link: "/guide/core/lifecycle" },
         { text: "数据结构", link: "/guide/core/structure" },
         { text: "类型转换", link: "/guide/core/type-transform" },
         { text: "系统相关", link: "/guide/core/system" },
-        { text: "生命周期", link: "/guide/core/lifecycle" },
       ],
     },
     {
@@ -226,6 +228,15 @@ function sidebarOtherDesign(){
         { text: "隐式与显式设计", link: "/other/design/" },
         { text: "Context相关设计", link: "/other/design/" },
       ],
+    },
+  ]
+}
+
+function sidebarOtherQuestion(){
+  return [
+    {
+      text: "常见问题",
+      items: [],
     },
   ]
 }
