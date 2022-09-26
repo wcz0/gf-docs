@@ -1,4 +1,4 @@
-let HOST = process.argv.splice(2)[0] || 'ftp';
+let HOST = process.argv.splice(2)[0];
 
 export default {
   lang: "zh-CN",
