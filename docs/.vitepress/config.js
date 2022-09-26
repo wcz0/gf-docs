@@ -12,7 +12,6 @@ export default {
     lastUpdatedText: '上次更新',
     outlineTitle: '本页目录',
     // logo: '/logo.png',
-    // outline: 2,
     editLink: {
       pattern: "https://github.com/wcz0/gf-docs/edit/main/docs/:path",
       text: "在GitHub上编辑这个页面",
@@ -45,7 +44,7 @@ export default {
 function nav() {
   return [
     { 
-      text: "指南(wip)", 
+      text: "文档(wip)",
       link: "/guide/introduction/introduce", 
       activeMatch: "/guide/"
     },
