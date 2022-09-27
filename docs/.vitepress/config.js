@@ -33,6 +33,7 @@ export default {
       "/other/design": sidebarOtherDesign(),
       "/other/learning": sidebarOtherLearning(),
       "/other/question": sidebarOtherQuestion(),
+      "/other/share" : sidebarOtherShare(),
     },
     socialLinks: [{ icon: "github", link: "https://github.com/gogf/gf" }],
     docFooter: {
@@ -62,7 +63,7 @@ function nav() {
       items: [
         { text: "框架学习资料", link: "/other/learning" },
         { text: "技术分享交流", link: "/other/share" },
-        { text: "框架设计", link: "/other/design" },
+        { text: "框架设计", link: "/other/design/modularization" },
         { text: "常见问题", link: "/other/question" },
       ],
       activeMatch: "/other/",
@@ -218,7 +219,7 @@ function sidebarOtherDesign(){
     {
       text: "框架设计",
       items: [
-        { text: "模块化设计", link: "/other/design/" },
+        { text: "模块化设计", link: "/other/design/modularization" },
         { text: "统一框架设计", link: "/other/design/" },
         { text: "工程开发设计", link: "/other/design/" },
         { text: "微服务相关设计", link: "/other/design/" },
@@ -226,7 +227,7 @@ function sidebarOtherDesign(){
         { text: "全错误堆栈设计", link: "/other/design/" },
         { text: "接口化与泛型设计", link: "/other/design/" },
         { text: "隐式与显式设计", link: "/other/design/" },
-        { text: "Context相关设计", link: "/other/design/" },
+        { text: "Context相关设计", link: "/other/design/context" },
       ],
     },
   ]
