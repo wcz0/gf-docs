@@ -1,1 +1,0 @@
-import{_ as e,c as t,o as a}from"./app.c9597982.js";const l=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"other/learning.md","lastUpdated":1664242406000}'),r={name:"other/learning.md"};function n(o,s,c,i,p,d){return a(),t("div")}const m=e(r,[["render",n]]);export{l as __pageData,m as default};
