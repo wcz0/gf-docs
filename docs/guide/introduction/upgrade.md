@@ -13,8 +13,9 @@
 3. 一般来说升级后重新编译，根据编译错误提示修改代码即可完成升级。
 4. `gredis`组件由于支持集群化，因此配置发生了变化，这块需要注意。
 
-| 我们没有提供升级工具，因为我们觉得提供升级指导即可。 |
-| ---------------------------------------------------- |
+::: warning
+我们没有提供升级工具，因为我们觉得提供升级指导即可。
+:::
 
 ## v1与v2的兼容性
 
@@ -24,33 +25,19 @@
 
 全局替换源代码即可，规则如下：
 
-|
-
 ```
 "github.com/gogf/gf/ => "github.com/gogf/gf/v2/
 ```
 
-|  |
-| - |
-
-像这样：
-
-![](https://goframe.org/download/attachments/41281995/image2022-3-18_11-36-49.png?version=1&modificationDate=1647574455583&api=v2 "GoFrame (ZH)-v2.x &gt; 如何从v1愉快升级到v2 &gt; image2022-3-18_11-36-49.png")
-
 # 下载最新v2版本
 
-|
-
-```
+```shell
 go get -u github.com/gogf/gf/v2@latest
 ```
 
-|  |
-| - |
-
 # 工程目录的调整
 
-如果您使用的是 `GoFrame`官方推荐的工程目录结构，可以参考最新的工程目录结构手动调整即可：[工程目录设计](https://goframe.org/pages/viewpage.action?pageId=30740166)
+如果您使用的是 `GoFrame`官方推荐的工程目录结构，可以参考最新的工程目录结构手动调整即可：[目录结构](../getting-start/structure.md)
 
 需要注意的是，最新的 `cli`工具不再支持旧版工程目录的项目创建。
 
