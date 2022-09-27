@@ -12,13 +12,14 @@ export default {
     lastUpdatedText: '上次更新',
     outlineTitle: '本页目录',
     // logo: '/logo.png',
+    outline: [2, 3],
     editLink: {
       pattern: "https://github.com/wcz0/gf-docs/edit/main/docs/:path",
       text: "在GitHub上编辑这个页面",
     },
     // algolia: {
-    //   appId: '',
-    //   apiKey: '',
+    //   appId: 'TTY57HUKA2',
+    //   apiKey: 'df5950b55aa070c913d105b86deda838',
     //   indexName: 'gf-docs',
     // },
     footer: {
