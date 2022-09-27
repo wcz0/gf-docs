@@ -126,7 +126,7 @@ function sidebarGuide() {
     {
       text: "深入了解",
       items: [
-        { text: "HTTP 客户端", link: "/guide/deep/http-client" },
+        { text: "HTTP 客户端", link: "/guide/deep/http-client"},
         { text: "任务定时器", link: "/guide/deep/cron" },
         { text: "命令行", link: "/guide/deep/command" },
         { text: "链路跟踪", link: "/guide/deep/periodic" },
