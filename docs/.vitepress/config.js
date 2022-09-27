@@ -79,7 +79,7 @@ function sidebarGuide() {
         { text: "项目介绍", link: "/guide/introduction/introduce" },
         { text: "版本计划", link: "/guide/introduction/project" },
         { text: "如何从v1升级到v2", link: "/guide/introduction/upgrade" },
-        { text: "版本更新记录", link: "/guide/introduction//record" },
+        { text: "版本发布记录", link: "/guide/introduction//record" },
       ],
     },
     {
