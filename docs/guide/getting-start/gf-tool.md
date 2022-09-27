@@ -218,12 +218,12 @@ gf den service
 
 #### 自动模式
 
-如果您是使用的GolandIDE，那么可以使用我们提供的配置文件：[watchers.xml](file/watchers.xml)  自动监听代码文件修改时自动生成接口文件。使用方式，如下图：
+如果您是使用的GolandIDE，那么可以使用我们提供的配置文件：[watchers.xml](/files/watchers.xml)  自动监听代码文件修改时自动生成接口文件。使用方式，如下图：
 ![gen-service-1](images/gen-service-1.png)
 
 #### 具体使用手摸手
 
-1. 我们建议您在使用Goland IDE时，使用我们提供的配置文件：[watchers.xml](file/watchers.xml)
+1. 我们建议您在使用Goland IDE时，使用我们提供的配置文件：[watchers.xml](/files/watchers.xml)
 2. 编写您的业务逻辑代码<br>![gen-service-2](images/gen-service-2.png)
 3. 生成接口及服务注册文件<br>如果您已经按照Step1做好了配置，那么这一步可以忽略。因为在您编写代码的时候，``service``
    便同时生成了接口定义文件。<br>否则，每一次在您开发/更新完成``logic``业务模块后，您需要手动执行一下 ``gf gen service``
