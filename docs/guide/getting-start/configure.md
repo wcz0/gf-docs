@@ -97,9 +97,7 @@ server:
 	    rotateCheckInterval:  "24h" 
 ```
 
-其中logger项的参考[日志](). 
-
-todo:
+其中logger项的参考 todo: 日志.
 
 ## 配置文件模板
 
