@@ -128,10 +128,6 @@ type User struct{
 
 :::
 
-
-
-
-
 ## Context
 
 请求流程往往会在上下文中共享一些自定义设置的变量，例如在请求开始之前通过中间件设置一些变量，随后在路由服务方法中可以获取该变量并相应对一些处理.
@@ -184,3 +180,41 @@ func main() {
 	s.Run()
 }
 ```
+
+## 文件上传
+
+在服务端通过 `Request`对象获取上传文件：
+
+```go
+import (
+	"github.com/gogf/gf/v2/frame/g"
+	"github.com/gogf/gf/v2/net/ghttp"
+)
+
+// Upload uploads files to /tmp .
+func Upload(r *ghttp.Request) {
+	files := r.GetUploadFiles("upload-file")
+    names, err := files.Save("/tmp/")
+    if err != nil {
+		r.Response.WriteExit(err)
+	}
+	r.Response.WriteExit("upload successfully: ", names)
+}
+
+func main() {
+	s := g.Server()
+	s.Group("/upload", func(group *ghttp.RouterGroup) {
+		group.POST("/", Upload)
+	})
+	s.Run()
+}
+```
+
+http://127.0.0.1:8000/upload 接口用于文件上传，该接口同时支持单个文件或者多个文件上传；
+
+**关键代码说明**
+
+1. 我们在服务端可以通过 `r.GetUploadFiles`方法获得上传的所有文件对象，也可以通过 `r.GetUploadFile`获取单个上传的文件对象。
+2. 在 `r.GetUploadFiles("upload-file")`中的参数 `"upload-file"`为本示例中客户端上传时的表单文件域名称，开发者可以根据前后端约定在客户端中定义，以方便服务端接收表单文件域参数。
+3. 通过 `files.Save`可以将上传的多个文件方便地保存到指定的目录下，并返回保存成功的文件名。如果是批量保存，只要任意一个文件保存失败，都将会立即返回错误。此外，`Save`方法的第二个参数支持随机自动命名上传文件。
+4. 通过 `group.POST("/", Upload)`注册的路由仅支持 `POST`方式访问。

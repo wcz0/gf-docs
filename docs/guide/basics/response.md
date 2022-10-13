@@ -153,12 +153,11 @@ func main() {
 	s.BindHandler("/login", func(r *ghttp.Request) {
 		r.Response.Writeln("Login First")
 	})
-	s.SetPort(8199)
 	s.Run()
 }
 ```
 
-运行后，我们通过浏览器访问 [http://127.0.0.1:8199/](http://127.0.0.1:8199/) 随后可以 发现浏览器立即跳转到了 [http://127.0.0.1:8199/login](http://127.0.0.1:8199/login) 页面。
+运行后，我们通过浏览器访问 http://127.0.0.1:8000/ 随后可以 发现浏览器立即跳转到了 http://127.0.0.1:8000/login 页面。
 
 ### `RedirectBack`
 
@@ -185,7 +184,7 @@ func main() {
 }
 ```
 
-运行后，我们通过浏览器访问 [http://127.0.0.1:8199/page](http://127.0.0.1:8199/page) 点击页面的 `back`连接 ，可以发现点击后页面随后又跳转了回来
+运行后，我们通过浏览器访问 http://127.0.0.1:8000/page 点击页面的 `back`连接 ，可以发现点击后页面随后又跳转了回来
 
 
 ## Exit控制
@@ -219,12 +218,11 @@ func main() {
 		}
 		r.Response.Writeln("smith")
 	})
-	s.SetPort(8199)
 	s.Run()
 }
 ```
 
-执行后，我们访问 [http://127.0.0.1:8199/?type=1](http://127.0.0.1:8199/?type=1) ，可以看到页面输出了：
+执行后，我们访问 http://127.0.0.1:8000/?type=1，可以看到页面输出了：
 
 ```
 john
@@ -250,12 +248,11 @@ func main() {
 		}
 		r.Response.Writeln("smith")
 	})
-	s.SetPort(8199)
 	s.Run()
 }
 ```
 
-执行后，我们再次访问 [http://127.0.0.1:8199/?type=1](http://127.0.0.1:8199/?type=1) ，可以看到页面输出了：
+执行后，我们再次访问 http://127.0.0.1:8000/?type=1，可以看到页面输出了：
 
 ```
 john
@@ -263,9 +260,65 @@ john
 
 此外，`Response`对象中提供了很多 `Write*Exit`的方法，表示输出内容后立即调用 `Exit`方法退出当前服务方法。
 
-
 ## 文件下载
 
+`Response`对象支持文件下载。
+
+相关方法：
+
+```go
+func (r *Response) ServeFile(path string, allowIndex ...bool)
+func (r *Response) ServeFileDownload(path string, name ...string)
+```
+
+### `ServeFile`
+
+通过给定文件路径 `path`，`ServeFile`方法将会自动识别文件格式，如果是目录或者文本内容将会直接展示文件内容。如果 `path`参数为目录，那么第二个参数 `allowIndex`控制是否可以展示目录下的文件列表。
+
+使用示例：
 
 
-模板解析
+```go
+package main
+
+import (
+	"github.com/gogf/gf/v2/frame/g"
+	"github.com/gogf/gf/v2/net/ghttp"
+)
+
+func main() {
+	s := g.Server()
+	s.BindHandler("/", func(r *ghttp.Request) {
+		r.Response.ServeFile("test.txt")
+	})
+	s.Run()
+}
+```
+
+访问 [http://127.0.0.1:8999](http://127.0.0.1:8999/) 可以发现文件内容被展示到了页面。
+
+# `ServeFileDownload`
+
+`ServeFileDownload`是相对使用频率比较高的方法，用于直接引导客户端下载指定路径的文件，并可以重新给定下载的文件名称。`ServeFileDownload`方法采用的是流式下载控制，对内存占用较少。使用示例，我们把上面示例中的 `ServeFile`方法改为 `ServeFileDownload`方法：
+
+```go
+package main
+
+import (
+	"github.com/gogf/gf/v2/frame/g"
+	"github.com/gogf/gf/v2/net/ghttp"
+)
+
+func main() {
+	s := g.Server()
+	s.BindHandler("/", func(r *ghttp.Request) {
+		r.Response.ServeFileDownload("test.txt")
+	})
+	s.SetPort(8999)
+	s.Run()
+}
+```
+
+
+
+## 模板解析
