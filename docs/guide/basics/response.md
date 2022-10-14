@@ -33,7 +33,6 @@ func (r *Response) WriteXml(content interface{}, rootTag ...string) error
 func (r *Response) WriteXmlExit(content interface{}, rootTag ...string) error
 ```
 
-
 `Response`提供了对 `JSON/XML`数据格式输出的原生支持，通过以下方法实现：
 
 1. `WriteJson*` 方法用于返回 `JSON`数据格式，参数为任意类型，可以为 `string`、`map`、`struct`等等。返回的 `Content-Type`为 `application/json`。
@@ -123,7 +122,6 @@ func main() {
 }
 ```
 
-
 ## 重定向Redirect
 
 我们可以通过 `RedirectTo/RedirectBack`来实现页面之间的跳转，该功能通过 `Location Header`实现。相关方法：
@@ -179,13 +177,11 @@ func main() {
 	s.BindHandler("/back", func(r *ghttp.Request) {
 		r.Response.RedirectBack()
 	})
-	s.SetPort(8199)
 	s.Run()
 }
 ```
 
 运行后，我们通过浏览器访问 http://127.0.0.1:8000/page 点击页面的 `back`连接 ，可以发现点击后页面随后又跳转了回来
-
 
 ## Exit控制
 
@@ -277,7 +273,6 @@ func (r *Response) ServeFileDownload(path string, name ...string)
 
 使用示例：
 
-
 ```go
 package main
 
@@ -297,7 +292,7 @@ func main() {
 
 访问 [http://127.0.0.1:8999](http://127.0.0.1:8999/) 可以发现文件内容被展示到了页面。
 
-# `ServeFileDownload`
+### `ServeFileDownload`
 
 `ServeFileDownload`是相对使用频率比较高的方法，用于直接引导客户端下载指定路径的文件，并可以重新给定下载的文件名称。`ServeFileDownload`方法采用的是流式下载控制，对内存占用较少。使用示例，我们把上面示例中的 `ServeFile`方法改为 `ServeFileDownload`方法：
 
@@ -314,11 +309,8 @@ func main() {
 	s.BindHandler("/", func(r *ghttp.Request) {
 		r.Response.ServeFileDownload("test.txt")
 	})
-	s.SetPort(8999)
 	s.Run()
 }
 ```
-
-
 
 ## 模板解析

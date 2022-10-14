@@ -194,7 +194,7 @@ function sidebarOtherLearning() {
     {
       text: "框架学习资料",
       items: [
-        { text: "官方教程", link: "/other/" },
+        { text: "官方教程", link: "/other/official" },
         { text: "社区教程", link: "/other/" },
         { text: "Golang资源", link: "/other/go-resource" },
         { text: "格式化打印占位符", link: "/other/fmt" },
@@ -209,7 +209,7 @@ function sidebarOtherShare(){
     {
       text: "技术分享交流",
       items: [
-        { text: "Q群", link: "/other/" },
+        { text: "Q群", link: "/other/qq" },
       ],
     },
   ]
