@@ -196,7 +196,7 @@ func main() {
 
 `Exit*`流程退出特性底层采用的是 `panic...recover...`机制来实现的，CPU执行损耗大约几十纳秒（`ns`），通过极少的运行时开销来提高易用性。
 
-# `Exit`返回方法
+### `Exit`返回方法
 
 ```go
 package main
