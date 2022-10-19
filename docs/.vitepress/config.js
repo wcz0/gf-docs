@@ -109,7 +109,7 @@ function sidebarGuide() {
         { text: "API文档", link: "/guide/basics/api-docs" },
         { text: "中间件", link: "/guide/basics/middleware" },
         { text: "请求", link: "/guide/basics/request" },
-        { text: "表单验证", link: "/guide/basics/validation" },
+        { text: "数据验证", link: "/guide/basics/validation" },
         { text: "响应", link: "/guide/basics/response" },
         { text: "Cookie", link: "/guide/basics/cookie" },
         { text: "Session", link: "/guide/basics/session" },
