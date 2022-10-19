@@ -1,1 +1,0 @@
-import{_ as e,c as t,o as a}from"./app.821e63d0.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"other/qq.md","lastUpdated":1665970225000}'),r={name:"other/qq.md"};function o(s,c,n,p,d,_){return a(),t("div")}const f=e(r,[["render",o]]);export{m as __pageData,f as default};
