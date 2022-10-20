@@ -6,7 +6,7 @@
 
 数据校验设计的灵感来源于经典的 `PHP Laravel`框架 [https://laravel.com/](https://laravel.com/) 感谢 `Laravel` ❤️
 
-::: 
+:::
 
 ## 验证规则
 
@@ -453,25 +453,25 @@
   ```
 
   func Example_Rule_Before() {
-  	type BizReq struct {
-  		Time1 string `v:"before:Time3"`
-  		Time2 string `v:"before:Time3"`
-  		Time3 string
-  	}
-  	var (
-  		ctx = context.Background()
-  		req = BizReq{
-  			Time1: "2022-09-02",
-  			Time2: "2022-09-03",
-  			Time3: "2022-09-03",
-  		}
-  	)
-  	if err := g.Validator().Data(req).Run(ctx); err != nil {
-  		fmt.Println(err.String())
-  	}
+  type BizReq struct {
+  Time1 string `v:"before:Time3"`
+  Time2 string `v:"before:Time3"`
+  Time3 string
+  }
+  var (
+  ctx = context.Background()
+  req = BizReq{
+  Time1: "2022-09-02",
+  Time2: "2022-09-03",
+  Time3: "2022-09-03",
+  }
+  )
+  if err := g.Validator().Data(req).Run(ctx); err != nil {
+  fmt.Println(err.String())
+  }
 
-    // Output:
-  	// The Time2 value`2022-09-03` must be before field Time3 value `2022-09-03`
+  // Output:
+  // The Time2 value `2022-09-03` must be before field Time3 value `2022-09-03`
   }
 
 ```
@@ -1851,39 +1851,18 @@
 
 ## 验证对象
 
-
-
 ## 验证结果
-
 
 ## 参数类型
 
-
-
 ## 可选验证
-
-
-
 
 ## 递归验证
 
-
-
-
-
 ## 自定义规则
-
-
-
 
 ## 自定义错误
 
-
-
-
 ## 方法介绍
-
-
-
 
 ## FAQ
