@@ -224,6 +224,7 @@ func main() {
             r.Response.Write("哈喽世界！")
         })
     s.Run()
+}
 ```
 
 #### 包方法注册
