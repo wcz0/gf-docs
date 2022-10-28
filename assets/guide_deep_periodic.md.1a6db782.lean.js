@@ -1,1 +1,0 @@
-import{_ as e,c as t,o as a}from"./app.3c69d0ad.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"guide/deep/periodic.md","lastUpdated":1666839777000}'),r={name:"guide/deep/periodic.md"};function o(c,d,i,p,s,n){return a(),t("div")}const f=e(r,[["render",o]]);export{m as __pageData,f as default};
