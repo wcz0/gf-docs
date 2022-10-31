@@ -1,3 +1,5 @@
+# 服务
+
 # 配置
 
 GoFrame框架的WebServer配置管理非常方便，支持通过配置文件配置、多种配置文件格式、多种配置方式以及若干配置方法
@@ -88,9 +90,9 @@ server:
     address: ":8080"
     logger:
       path:                 "/var/log/server" 
-	    file:                 "{Y-m-d}.log"      
+	    file:                 "{Y-m-d}.log"    
 	    stdout:               false  
-	    rotateSize:           "100M"    
+	    rotateSize:           "100M"  
 	    rotateBackupLimit:    10
 	    rotateBackupExpire:   "60d"
 	    rotateBackupCompress: 9
@@ -170,7 +172,7 @@ server:
     nameToUriType:       0                  # 路由注册中使用对象注册时的路由生成规则。默认为0
     routeOverWrite:      false              # 当遇到重复路由注册时是否强制覆盖。默认为false，重复路由存在时将会在启动时报错退出
     dumpRouterMap:       true               # 是否在Server启动时打印所有的路由列表。默认为true
-    graceful:            false              # 是否开启平滑重启特性，开启时将会在本地增加10000的本地TCP端口用于进程间通信。默认false         
+    graceful:            false              # 是否开启平滑重启特性，开启时将会在本地增加10000的本地TCP端口用于进程间通信。默认false       
     gracefulTimeout:     2                  # 父进程在平滑重启后多少秒退出，默认2秒。若请求耗时大于该值，可能会导致请求中断
 ```
 

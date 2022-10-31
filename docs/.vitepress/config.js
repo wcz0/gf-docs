@@ -89,7 +89,7 @@ function sidebarGuide() {
         { text: "安装", link: "/guide/getting-start/install" },
         { text: "开发工具", link: "/guide/getting-start/gf-tool" },
         { text: "目录结构", link: "/guide/getting-start/structure" },
-        { text: "配置", link: "/guide/getting-start/configure" },
+        { text: "服务配置", link: "/guide/getting-start/configure" },
         { text: "部署", link: "/guide/getting-start/deploy" },
       ],
     },
@@ -105,6 +105,7 @@ function sidebarGuide() {
     {
       text: "基础功能",
       items: [
+        { text: "配置管理", link: "/guide/basics/configure" },
         { text: "路由", link: "/guide/basics/route" },
         { text: "API文档", link: "/guide/basics/api-docs" },
         { text: "中间件", link: "/guide/basics/middleware" },
