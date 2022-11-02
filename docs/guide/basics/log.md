@@ -72,7 +72,7 @@ import "github.com/gogf/gf/v2/os/glog"
 
 完整配置文件配置项及说明如下，其中配置项名称不区分大小写：
 
-```yml
+```yaml
 logger:
   path:                  "/var/log/"   # 日志文件路径。默认为空，表示关闭，仅输出到终端
   file:                  "{Y-m-d}.log" # 日志文件格式。默认为"{Y-m-d}.log"
@@ -95,7 +95,7 @@ logger:
 
 #### 示例1，默认配置项
 
-```yml
+```yaml
 logger:
   path:    "/var/log"
   level:   "all"
@@ -108,7 +108,7 @@ logger:
 
 多个 `Logger`的配置示例：
 
-```yml
+```yaml
 logger:
   path:    "/var/log"
   level:   "all"
