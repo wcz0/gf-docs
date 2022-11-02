@@ -471,7 +471,7 @@ func main() {
 
 若需要在文件中的日志也带上颜色可以在配置文件中添加配置
 
-```yml
+```yaml
 logger:
   stdoutColorDisabled: false # 是否关闭终端的颜色打印。默认否，表示终端的颜色输出。
   writerColorEnable:   false # 是否开启Writer的颜色打印。默认否，表示不输出颜色到自定义的Writer或者文件。
