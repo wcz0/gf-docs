@@ -46,7 +46,7 @@ import "github.com/gogf/gf/v2/os/glog"
 
 ### 知识图谱
 
-![](https://goframe.org/download/attachments/1114673/GoFrame%20Logging%20Features.png?version=1&modificationDate=1623331625106&api=v2)
+![](./log-mind-map.png)
 
 ### 单例对象
 
@@ -91,7 +91,7 @@ logger:
   writerColorEnable:     false         # 日志文件是否带上颜色。默认false，表示不带颜色
 ```
 
-其中，`level`配置项使用字符串配置，按照日志级别支持以下配置：`DEBU` < `INFO` < `NOTI` < `WARN` < `ERRO` < `CRIT`，也支持 `ALL`, `DEV`, `PROD`常见部署模式配置名称。`level`配置项字符串不区分大小写。关于日志级别的详细介绍请查看 [日志组件-日志级别](https://goframe.org/pages/viewpage.action?pageId=1114151) 章节。
+其中，`level`配置项使用字符串配置，按照日志级别支持以下配置：`DEBU` < `INFO` < `NOTI` < `WARN` < `ERRO` < `CRIT`，也支持 `ALL`, `DEV`, `PROD`常见部署模式配置名称。`level`配置项字符串不区分大小写。关于日志级别的详细介绍请查看 [日志-日志级别](./log#日志级别) 章节。
 
 #### 示例1，默认配置项
 
@@ -148,7 +148,7 @@ l4 := g.Log()
 2. 也可以使用 `Logger`对象的 `Set*`方法进行特定配置的设置。
 3. 主要注意的是，配置项在 `Logger`对象执行日志输出之前设置，避免并发安全问题。
 
-我们可以使用 `SetConfigWithMap`方法通过 `Key-Value`键值对来设置/修改 `Logger`的特定配置，其余的配置使用默认配置即可。其中 `Key`的名称即是 `Config`这个 `struct`中的属性名称，并且不区分大小写，单词间也支持使用 `-`/`_`/`空格`符号连接，具体可参考 [类型转换-Struct转换]() 章节的转换规则。
+我们可以使用 `SetConfigWithMap`方法通过 `Key-Value`键值对来设置/修改 `Logger`的特定配置，其余的配置使用默认配置即可。其中 `Key`的名称即是 `Config`这个 `struct`中的属性名称，并且不区分大小写，单词间也支持使用 `-`/`_`/`空格`符号连接，具体可参考 [类型转换-Struct转换](../core/type-transform.md) 章节的转换规则。
 
 简单示例：
 
