@@ -91,7 +91,7 @@ logger:
   writerColorEnable:     false         # 日志文件是否带上颜色。默认false，表示不带颜色
 ```
 
-其中，`level`配置项使用字符串配置，按照日志级别支持以下配置：`DEBU` < `INFO` < `NOTI` < `WARN` < `ERRO` < `CRIT`，也支持 `ALL`, `DEV`, `PROD`常见部署模式配置名称。`level`配置项字符串不区分大小写。关于日志级别的详细介绍请查看 [日志-日志级别](./log#日志级别) 章节。
+其中，`level`配置项使用字符串配置，按照日志级别支持以下配置：`DEBU` < `INFO` < `NOTI` < `WARN` < `ERRO` < `CRIT`，也支持 `ALL`, `DEV`, `PROD`常见部署模式配置名称。`level`配置项字符串不区分大小写。关于日志级别的详细介绍请查看 [日志-日志级别](#日志级别) 章节。
 
 #### 示例1，默认配置项
 
@@ -186,7 +186,11 @@ LEVEL_ERRO
 
 我们可以通过 `位操作`组合使用这几种级别，例如其中 `LEVEL_ALL`等价于 `LEVEL_DEBU | LEVEL_INFO | LEVEL_NOTI | LEVEL_WARN | LEVEL_ERRO | LEVEL_CRIT`。我们还可以通过 `LEVEL_ALL & ^LEVEL_DEBU & ^LEVEL_INFO & ^LEVEL_NOTI`来过滤掉 `LEVEL_DEBU/LEVEL_INFO/LEVEL_NOTI`日志内容。
 
+::: waring
+
 当然 `glog`模块还有其他的一些级别，如 `CRIT`和 `FATA`，但是这两个级别是非常严重的错误，无法由开发者自定义屏蔽，产生严重错误的时候。将会产生一些额外的系统动作，如 `panic`/`exit`。
+
+:::
 
 使用示例：
 
@@ -308,7 +312,7 @@ func main() {
 
 执行后，终端输出：
 
-```
+```shell
 2021-12-31 11:21:45.754 [debug] test 
 ```
 
@@ -437,8 +441,101 @@ func Header(enabled...bool) *Logger
 // 输出日志调用行号信息
 func Line(long...bool) *Logger
 // 异步输出日志
-func Async(enabled...bool) *Logger
+func Async(enabled...bool) *Logge
 ```
+
+
+
+### 示例1, 基本使用
+
+```go
+import (
+	"context"
+
+	"github.com/gogf/gf/v2/frame/g"
+	"github.com/gogf/gf/v2/os/gfile"
+)
+
+func main() {
+	ctx := context.TODO()
+	path := "/tmp/glog-cat"
+	g.Log().SetPath(path)
+	g.Log().Stdout(false).Cat("cat1").Cat("cat2").Print(ctx, "test")
+	list, err := gfile.ScanDir(path, "*", true)
+	g.Dump(err)
+	g.Dump(list)
+}
+```
+
+执行后，输出结果为：
+
+```
+null
+[
+	"/tmp/glog-cat/cat1",
+	"/tmp/glog-cat/cat1/cat2",
+	"/tmp/glog-cat/cat1/cat2/2018-10-10.log",
+]
+```
+
+### 示例2, 打印调用行号
+
+```go
+package main
+
+import (
+	"context"
+
+	"github.com/gogf/gf/v2/frame/g"
+)
+
+func main() {
+	ctx := context.TODO()
+	g.Log().Line().Print(ctx, "this is the short file name with its line number")
+	g.Log().Line(true).Print(ctx, "lone file name with line number")
+}
+```
+
+执行后，终端输出结果为：
+
+```
+2019-05-23 09:22:58.141 glog_line.go:8: this is the short file name with its line number
+2019-05-23 09:22:58.142 /Users/john/Workspace/Go/GOPATH/src/github.com/gogf/gf/.example/os/glog/glog_line.go:9: lone file name with line number
+```
+
+### 示例3, 文件回溯 `Skip`
+
+有时我们通过一些模块封装了 `glog`模块来打印日志，例如封装了一个 `logger`包通过 `logger.Print`来打印日志，这个时候打印出来的调用文件行号总是同一个位置，因为对于 `glog`来讲，它的调用方即总是 `logger.Print`方法。这个时候，我们可以通过设置回溯值来跳过回溯的文件数，使用 `SetStackSkip`或者链式方法 `Skip`实现。
+
+> 文件回溯值的设置同样也会影响 `Stack`调用回溯打印结果。
+
+```go
+package main
+
+import (
+	"context"
+
+	"github.com/gogf/gf/v2/frame/g"
+)
+
+func PrintLog(ctx context.Context, content string) {
+	g.Log().Skip(1).Line().Print(ctx, "line number with skip:", content)
+	g.Log().Line().Print(ctx, "line number without skip:", content)
+}
+
+func main() {
+	ctx := context.TODO()
+	PrintLog(ctx, "just test")
+}
+```
+
+执行后，终端输出结果为：
+
+```
+2019-05-23 19:30:10.984 glog_line2.go:13: line number with skip: just test
+2019-05-23 19:30:10.984 glog_line2.go:9: line number without skip: just test
+```
+
 
 ## 颜色打印
 
@@ -465,7 +562,7 @@ func main() {
 
 ![](https://goframe.org/download/attachments/20086799/image2021-12-31_10-51-10.png?version=1&modificationDate=1640919070315&api=v2)
 
-# 使用配置
+### 使用配置
 
 控制台是必然会自带颜色输出的，文件日志默认不带颜色
 
@@ -483,7 +580,7 @@ logger:
 g.Log().SetWriterColorEnable(true)
 ```
 
-# 默认颜色对应表
+### 默认颜色对应表
 
 默认情况下，不同日志等级对应的颜色如下：
 
