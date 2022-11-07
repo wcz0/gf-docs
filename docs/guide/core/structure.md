@@ -5086,7 +5086,7 @@ func main() {
 
    执行后，输出结果：
 
-   ```undefined
+   ```shell
     {"Id":1,"Name":"john","Scores":[100,99,98]}
    ```
 2. `Unmarshal`
@@ -5115,7 +5115,7 @@ func main() {
 
    执行后，输出结果：
 
-   ```undefined
+   ```shell
     {1 john [100,99,98]}
    ```
 
@@ -5279,7 +5279,7 @@ func main() {
   }
   ```
 
-#### `String`
+#### String
 
 * 说明：`String`将 `v`转换为字符串。
 * 格式：
@@ -5300,7 +5300,7 @@ func main() {
   }
   ```
 
-#### `Bool`
+#### Bool
 
 * 说明：`Bool`将 `v`转换为布尔值。
 * 格式：
@@ -5342,7 +5342,7 @@ func main() {
   }
   ```
 
-#### `Uint`
+#### Uint
 
 * 说明：`Uint`将 `v`转换为无符号整型。
 * 格式：
@@ -5363,7 +5363,7 @@ func main() {
   }
   ```
 
-#### `Float32`
+#### Float32
 
 * 说明：`Float32`将 `v`转换为 `32位`浮点型。
 * 格式：
@@ -5384,7 +5384,7 @@ func main() {
   }
   ```
 
-#### `Float64`
+#### Float64
 
 * 说明：`Float64`将 `v`转换为 `64位`浮点型。
 * 格式：
@@ -5405,7 +5405,7 @@ func main() {
   }
   ```
 
-#### `Time`
+#### Time
 
 * 说明：`Time`将 `v`转换为 `time.Time`。参数 `format`用 `gtime` 指定时间字符串的格式，例如：`Y-m-d H:i:s`。
 * 格式：
@@ -5426,7 +5426,7 @@ func main() {
   }
   ```
 
-#### `GTime`
+#### GTime
 
 * 说明：`G``Time`将 `v`转换为 `*gtime.Time`。参数 `format`用 `gtime` 指定时间字符串的格式，例如：`Y-m-d H:i:s`。
 * 格式：
@@ -5468,7 +5468,7 @@ func main() {
   }
   ```
 
-#### `MarshalJSON`
+#### MarshalJSON
 
 * 说明：`MarshalJSON` 实现了 `json`接口的 `MarshalJSON`。
 * 格式：
@@ -5499,7 +5499,7 @@ func main() {
   }
   ```
 
-#### `UnmarshalJSON`
+#### UnmarshalJSON
 
 * 说明： `UnmarshalJSON<span><span> </span></span>`实现了 `json`接口的 `<span> </span>UnmarshalJSON`。
 * 格式：
@@ -5531,7 +5531,7 @@ func main() {
   }
   ```
 
-#### `<span>UnmarshalValue</span>`
+#### UnmarshalValue
 
 * 说明： `UnmarshalValue` 是一个接口实现，它为 `Var`设置任何类型的值。
 * 格式：
@@ -5562,7 +5562,7 @@ func main() {
   }
   ```
 
-#### `<span>IsNil</span>`
+#### IsNil
 
 * 说明： `IsNil`判断 `v`是否为 `nil`，为 `nil`返回 `true`，反之返回 `false`。
 * 格式：
@@ -5589,7 +5589,7 @@ func main() {
   }
   ```
 
-#### `<span>IsEmpty</span>`
+#### IsEmpty
 
 * 说明： `IsEmpty`判断 `v`是否为空，为空返回 `true`，反之返回 `false`。
 * 格式：
@@ -5641,7 +5641,7 @@ func main() {
   }
   ```
 
-#### `<span>IsUint</span>`
+#### IsUint
 
 * 说明： `IsUint`判断 `v`是否为 `uint`类型，如果是 `uint`类型返回 `true`，反之返回 `false`。
 * 格式：
@@ -5689,7 +5689,7 @@ func main() {
   }
   ```
 
-#### `<span>IsSlice</span>`
+#### IsSlice
 
 * 说明： `IsSlice`判断 `v`是否为切片类型，如果是 `slice`类型返回 `true`，反之返回 `false`。
 * 格式：
@@ -5763,7 +5763,7 @@ func main() {
   }
   ```
 
-#### `<span>ListItemValues</span>`
+#### ListItemValues
 
 * 说明： `ListItemValues` 用键 `key`检索并返回所有项结构/映射的元素。注意，参数 `list`应该是切片类型，其中包含 `map` 或 `struct`的元素，否则它会返回一个空切片。
 * 格式：
@@ -5791,7 +5791,7 @@ func main() {
   }
   ```
 
-#### `ListItemValuesUnique`
+#### ListItemValuesUnique
 
 * 说明： `ListItemValuesUnique` 检索并返回所有带有指定 `key`的 `struct/map` 的唯一元素。注意，参数 `list`应该是切片类型，其中包含 `map` 或 `struct<span> </span>`的元素，否则它会返回一个空切片。
 * 格式：
@@ -5822,7 +5822,7 @@ func main() {
   }
   ```
 
-#### `Struct`
+#### Struct
 
 * 说明： `Struct` 将 `v`的值映射到“指针”。参数 `pointer`应该是指向结构体实例的指针。参数 `mapping`用于指定键到属性的映射规则。
 * 格式：
@@ -5857,7 +5857,7 @@ func main() {
   }
   ```
 
-#### `Structs`
+#### Structs
 
 * 说明： `Structs` 将 `v`转换为给定结构体的切片类型。参数 `pointer`应该是指向结构体实例的指针。参数 `mapping`用于指定键到属性的映射规则。
 * 格式：
@@ -5905,7 +5905,7 @@ func main() {
   }
   ```
 
-#### `Ints`
+#### Ints
 
 * 说明： `Ints` 将 `v`转换为 `[]int`。
 * 格式：
@@ -5955,7 +5955,7 @@ func main() {
   }
   ```
 
-#### `Uints`
+#### Uints
 
 * 说明：`Uints` 将 `v`转换为 `[]uint` 。
 * 格式：
@@ -5979,7 +5979,7 @@ func main() {
   }
   ```
 
-#### `Uint64s`
+#### Uint64s
 
 * 说明：`Uint64s` 将 `v`转换为 `[]uint64` 。
 * 格式：
@@ -6029,7 +6029,7 @@ func main() {
   }
   ```
 
-#### `Float64s`
+#### Float64s
 
 * 说明：`Float64s` 将 `v`转换为 `[]float64`。
 * 格式：
@@ -6079,7 +6079,7 @@ func main() {
   }
   ```
 
-#### `Strings`
+#### Strings
 
 * 说明：`Strings` 将 `v`转换为 `[]string`。
 * 格式：
@@ -6103,7 +6103,7 @@ func main() {
   }
   ```
 
-#### `Interfaces`
+#### Interfaces
 
 * 说明：`Interfaces` 将 `v`转换为 `[]interface{}`。
 * 格式：
@@ -6153,7 +6153,7 @@ func main() {
   }
   ```
 
-#### `Array`
+#### Array
 
 * 说明：`Array` `Interfaces`的别名。
 * 格式：
@@ -6202,7 +6202,7 @@ func main() {
   }
   ```
 
-#### `Map`
+#### Map
 
 * 说明：`Map` 将 `v`转换为 `map[string]interface{}`。
 * 格式：
