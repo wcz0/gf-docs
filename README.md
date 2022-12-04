@@ -4,7 +4,7 @@ GF 文档, 非官方项目
 
 整理gf官方文档, 文档还在整理中, 某些条目缺失, 请阅读官方文档
 
-个人能量有限, 欢迎PR
+个人能力有限, 欢迎PR
 
 在线地址 [https://gf-docs.wcz.one](https://gf-docs.wcz.one)(站点已被墙)
 
