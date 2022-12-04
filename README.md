@@ -6,7 +6,7 @@ GF 文档, 非官方项目
 
 个人能量有限, 欢迎PR
 
-~~在线地址 [https://gf-docs.wcz.one](https://gf-docs.wcz.one)(流量有限)(站点已被墙)~~
+在线地址 [https://gf-docs.wcz.one](https://gf-docs.wcz.one)(站点已被墙)
 
 Gihub Page [https://wcz0.github.io/gf-docs/](https://wcz0.github.io/gf-docs/)
 
