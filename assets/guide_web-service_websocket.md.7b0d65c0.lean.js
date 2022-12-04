@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as s}from"./app.c6c25b21.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"guide/web-service/websocket.md","lastUpdated":1670139263000}'),a={name:"guide/web-service/websocket.md"};function c(o,r,n,d,i,p){return s(),t("div")}const f=e(a,[["render",c]]);export{m as __pageData,f as default};
