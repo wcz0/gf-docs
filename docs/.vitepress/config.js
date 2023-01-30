@@ -17,11 +17,6 @@ export default {
       pattern: "https://github.com/wcz0/gf-docs/edit/main/docs/:path",
       text: "在GitHub上编辑这个页面",
     },
-    // algolia: {
-    //   appId: 'TTY57HUKA2',
-    //   apiKey: 'df5950b55aa070c913d105b86deda838',
-    //   indexName: 'gf-docs',
-    // },
     footer: {
       message: "Released under the MIT License.",
       copyright: "Copyright © 2022-present wcz0",
@@ -40,7 +35,12 @@ export default {
     docFooter: {
       prev: '上一页',
       next: '下一页'
-    }
+    },
+    // algolia: {
+    //   appId: '',
+    //   apiKey: '',
+    //   indexName: ''
+    // },
   },
 };
 
