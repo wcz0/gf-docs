@@ -1,0 +1,1 @@
+import{_ as e,c as t,o}from"./app.ce21e48a.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"guide/other/encode.md","lastUpdated":1675081585000}'),a={name:"guide/other/encode.md"};function r(c,n,s,d,p,i){return o(),t("div")}const f=e(a,[["render",r]]);export{m as __pageData,f as default};
