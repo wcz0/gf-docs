@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as r}from"./app.ce21e48a.js";const _=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"guide/core/type-transform.md","lastUpdated":1675240931000}'),a={name:"guide/core/type-transform.md"};function o(s,n,c,p,d,i){return r(),t("div")}const f=e(a,[["render",o]]);export{_ as __pageData,f as default};
